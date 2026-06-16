@@ -1,202 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram Trading Channel</title>
 
-<title>Zero To Hero - Telegram Trading Channel</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-<style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #f0f4ff, #ffffff);
+      text-align: center;
+      padding: 20px;
+    }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+    .container {
+      max-width: 400px;
+      width: 100%;
+    }
 
-body{
-background:#f4f7ff;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-text-align:center;
-padding:20px;
-}
+    .btn {
+      display: inline-block;
+      background: #007bff;
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 10px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
 
-/* Container */
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      background: #0056d2;
+    }
 
-.container{
-background:white;
-max-width:420px;
-width:100%;
-padding:35px 25px;
-border-radius:18px;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-}
+    .logo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin: 20px auto;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    }
 
-/* Join Button */
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.join-btn{
-display:inline-block;
-background:#2a63ff;
-color:white;
-padding:14px 22px;
-border-radius:40px;
-text-decoration:none;
-font-weight:600;
-margin-bottom:25px;
-transition:0.3s;
-box-shadow:0 6px 18px rgba(42,99,255,0.35);
-}
+    h1 {
+      font-size: 24px;
+      margin: 15px 0;
+      color: #111;
+    }
 
-.join-btn:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(42,99,255,0.45);
-}
+    .points {
+      text-align: left;
+      margin: 15px 0;
+    }
 
-/* Logo Badge */
+    .points p {
+      margin: 8px 0;
+      font-size: 14px;
+      color: #333;
+    }
 
-.logo{
-width:120px;
-height:120px;
-background:#0b2a6f;
-color:white;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:700;
-font-size:18px;
-margin:0 auto 20px auto;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
-}
+    .check {
+      color: green;
+      margin-right: 8px;
+      font-weight: bold;
+    }
 
-/* Title */
+    .highlight {
+      color: #007bff;
+      font-weight: 600;
+      margin: 15px 0;
+    }
 
-.title{
-color:#17a64a;
-font-size:28px;
-font-weight:700;
-margin-bottom:18px;
-}
+    .disclaimer {
+      font-size: 10px;
+      color: #777;
+      margin-top: 15px;
+    }
 
-/* Bullet Points */
+    .footer {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 20px;
+      background: linear-gradient(45deg, #ff6a00, #ff0000);
+      color: #fff;
+      font-size: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
 
-.features{
-list-style:none;
-text-align:left;
-margin-bottom:20px;
-}
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-.features li{
-margin:10px 0;
-font-size:15px;
-display:flex;
-align-items:center;
-}
-
-.check{
-color:#19c35a;
-font-weight:700;
-margin-right:8px;
-}
-
-/* Blue Text */
-
-.free{
-color:#2a63ff;
-font-weight:600;
-margin-bottom:20px;
-}
-
-/* Disclaimer */
-
-.disclaimer{
-font-size:11px;
-color:#666;
-margin-top:18px;
-line-height:1.5;
-}
-
-/* Footer Badge */
-
-.footer-badge{
-margin-top:20px;
-background:linear-gradient(45deg,#ff8a00,#ff2d55);
-color:white;
-padding:8px 14px;
-border-radius:25px;
-font-size:12px;
-display:inline-block;
-box-shadow:0 6px 15px rgba(0,0,0,0.2);
-}
-
-/* Mobile */
-
-@media(max-width:480px){
-
-.title{
-font-size:24px;
-}
-
-.logo{
-width:100px;
-height:100px;
-font-size:16px;
-}
-
-}
-
-</style>
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <div class="container">
 
-<a href="#" class="join-btn" onclick="joinTelegram()">JOIN NOW FOR FREE TELEGRAM CHANNEL 🚀</a>
+  <!-- 🔥 CHANGE LINKS HERE ONLY -->
+  <script>
+    const TELEGRAM_LINK = "https://t.me/yourchannel";   // 👉 change here
+    const LOGO_IMAGE = "https://via.placeholder.com/150"; // 👉 change image here
+    const FOOTER_LINK = "https://t.me/youragency"; // 👉 change footer link
+  </script>
 
-<div class="logo">
-ZERO<br>TO<br>HERO
-</div>
+  <!-- Top Button -->
+  <a id="topBtn" class="btn">JOIN NOW FOR FREE TELEGRAM CHANNEL 🚀</a>
 
-<div class="title">Zero To Hero</div>
+  <!-- Logo -->
+  <div class="logo">
+    <img id="logoImg" src="" alt="logo">
+  </div>
 
-<ul class="features">
+  <!-- Title -->
+  <h1>ZERO TO HERO</h1>
 
-<li><span class="check">✓</span> Nifty, BankNifty & Options calls with 90% accuracy</li>
+  <!-- Points -->
+  <div class="points">
+    <p><span class="check">✓</span>Nifty, BankNifty & Options calls with 90% accuracy</p>
+    <p><span class="check">✓</span>1–4 Risk Reward Ratio • Daily 2–3 calls</p>
+    <p><span class="check">✓</span>Target 100+ Points Daily • Most Trusted Channel</p>
+  </div>
 
-<li><span class="check">✓</span> 1–4 Risk Reward Ratio • Daily 2–3 calls</li>
+  <!-- Highlight -->
+  <div class="highlight">Join Today For FREE! 🚀</div>
 
-<li><span class="check">✓</span> Target 100+ Points Daily • Most Trusted Channel</li>
+  <!-- Bottom Button -->
+  <a id="bottomBtn" class="btn">JOIN NOW FOR FREE TELEGRAM CHANNEL 🚀</a>
 
-</ul>
+  <!-- Disclaimer -->
+  <div class="disclaimer">
+    Disclaimer: Educational content only. Not SEBI registered. Trading involves risk.
+  </div>
 
-<div class="free">Join Today For FREE! 🚀</div>
-
-<a href="#" class="join-btn" onclick="joinTelegram()">JOIN NOW FOR FREE TELEGRAM CHANNEL 🚀</a>
-
-<div class="disclaimer">
-Disclaimer: Educational content only. Not SEBI registered. Trading involves risk.
-</div>
-
-<div class="footer-badge">
-🔥 Ads by ADCRAFTAGENCY • Boost Reach 🚀
-</div>
+  <!-- Footer -->
+  <div class="footer">
+    🔥 <a id="footerLink" target="_blank">Ads by Snow ad agency • Boost Reach 🚀</a>
+  </div>
 
 </div>
 
 <script>
-
-function joinTelegram(){
-window.location.href="https://t.me/yourtelegramlink";
-}
-
+  // Auto apply links everywhere
+  document.getElementById("topBtn").href = TELEGRAM_LINK;
+  document.getElementById("bottomBtn").href = TELEGRAM_LINK;
+  document.getElementById("logoImg").src = LOGO_IMAGE;
+  document.getElementById("footerLink").href = FOOTER_LINK;
 </script>
 
 </body>
